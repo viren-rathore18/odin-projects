@@ -3,7 +3,7 @@ let computerScore = 0;
 
 function getHumanChoice() {
     const validChoices = ["rock", "paper", "scissors"];
-    let userChoice = prompt("What is your choice?", "");
+    let userChoice = prompt("What is your choice? (rock, paper, scissors)", "");
 
     if (!userChoice) {
         alert("You must input a value.");
@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
     const c = computerChoice.toLowerCase();
 
     if (h === c) {
-        return "It's a tie";
+        return "It's a tie!";
     }
 
     if (
@@ -40,10 +40,10 @@ function playRound(humanChoice, computerChoice) {
         (h === "scissors" && c === "paper")
     ) {
         humanScore++;
-        return `You win! ${humanChoice} beats ${computerChoice}`;
+        return `You win! ${humanChoice} beats ${computerChoice}.`;
     } else {
         computerScore++;
-        return `You lose! ${computerChoice} beats ${humanChoice}`;
+        return `You lose! ${computerChoice} beats ${humanChoice}.`;
     }
 }
 
@@ -51,15 +51,21 @@ function game() {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
-    console.log(`You chose: ${humanSelection}`);
-    console.log(`Computer chose: ${computerSelection}`);
+    alert(`You chose: ${humanSelection}`);
+    alert(`Computer chose: ${computerSelection}`);
 
-    console.log(playRound(humanSelection, computerSelection));
+    const result = playRound(humanSelection, computerSelection);
+    alert(result);
+
+    alert(`Score - You: ${humanScore} | Computer: ${computerScore}`);
+    console.log(result);
     console.log(`Score - You: ${humanScore} | Computer: ${computerScore}`);
 
     if (confirm("Play again?")) {
         game();
     } else {
+        alert("Final Score:");
+        alert(`You: ${humanScore} | Computer: ${computerScore}`);
         console.log("Final Score:");
         console.log(`You: ${humanScore} | Computer: ${computerScore}`);
     }
