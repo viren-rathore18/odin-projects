@@ -12,7 +12,7 @@ function getHumanChoice() {
     if(validChoices.includes(userChoice)) {
         return userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
     } else {
-        alert("Invalid Input , enter Rock ,Paper, Scissors");
+        alert("Invalid Input! Please enter Rock, Paper, or Scissors");  // More polished
         return getHumanChoice(); //ask again
     }
 }
@@ -49,6 +49,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function game() {
+
+  humanScore = 0;
+  computerScore = 0;
     
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
