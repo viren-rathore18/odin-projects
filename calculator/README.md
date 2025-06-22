@@ -17,7 +17,3 @@ A simple, responsive calculator built using **HTML**, **CSS**, and **JavaScript*
 
 Just open `index.html` in your browser:
 
-```bash
-firefox index.html
-# or
-google-chrome index.html
