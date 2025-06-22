@@ -15,5 +15,5 @@ A simple, responsive calculator built using **HTML**, **CSS**, and **JavaScript*
 
 ## 🚀 How to Run
 
-Just open `index.html` in your browser:
+Just open `https://viren-rathore18.github.io/odin-projects/calculator/` in your browser:
 
