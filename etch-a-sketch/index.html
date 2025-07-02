@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="container">
+        <header>
+            <h1><i class="fas fa-palette"></i> Etch-a-Sketch</h1>
+            <p class="subtitle">Create pixel art by hovering over the grid. Customize your canvas size and unleash your creativity!</p>
+        </header>
+        
+        <div class="controls">
+            <div class="input-group">
+                <i class="fas fa-border-all"></i>
+                <label for="input">Grid Size:</label>
+                <input type="number" id="input" min="1" max="100" value="16">
+            </div>
+            
+            <div class="btn-group">
+                <button id="submit">
+                    <i class="fas fa-play"></i> Generate
+                </button>
+                <button id="resetBtn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+                <button id="createNewBtn">
+                    <i class="fas fa-plus"></i> New Grid
+                </button>
+            </div>
+        </div>
+        
+        <div class="grid-section">
+            <h3 class="grid-title"><i class="fas fa-drafting-compass"></i> Drawing Canvas</h3>
+            <div id="grid-container"></div>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to Use</h3>
+            <ul>
+                <li>Enter a grid size (1-100) and click <strong>Generate</strong> to create your canvas</li>
+                <li>Hover over squares to draw - each pass adds color</li>
+                <li>Use <strong>Reset</strong> to clear your current drawing</li>
+                <li>Use <strong>New Grid</strong> to create a fresh canvas with your current size</li>
+                <li>Try different grid sizes for finer or coarser detail</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with ❤️ | Etch-a-Sketch Project | The Odin Project Foundations</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

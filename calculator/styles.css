@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+body {
+ background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ color: #f0f0f0;
+ 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 20px;
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 20px;
+  
+}
+
+.logo{
+  font-size:  1.8rem;
+  font-weight: bold;
+  color: #ff9a0d;
+  text-shadow: 0 0 8px rgba(255, 154, 13, 0.5);
+  letter-spacing: 1px;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+ background: rbga(255, 154, 13, 0.2);
+ color: #fff;
+ text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.calculator-container {
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0 ,0, 0.5);
+  border: 1px solid #3a3a3a;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
+.display {
+  background: #0a0e12;
+  color: #f0f0f0;
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+
+.btn {
+  color: #e0e0e0;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 60px;
+}
+
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-0.8px);
+}
+
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  gap : 15px;
+}
+
+
+.firstrow, .otherrows {
+  display: flex;
+  gap: 15px;
+}
+
+
+.firstrow {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstrow > div {
+  display: flex;
+  gap : 15px;
+}
+
+
+#branding {
+  font-size : 1.8rem;
+  font-weight: bold;
+  color: #ff9a0d;
+  text-shadow: 0 0 8px rgba(255, 154, 13, 0.5);
+  padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Number Buttons */
+
+.numericKeys {
+  background: linear-gradient(to bottom, #5a5a5a, #3d3d3d);
+}
+
+.numericKeys:active {
+  background: linear-gradient(to bottom, #4a4a4a, #2d2d2d);
+}
+
+
+/* operator Buttons */
+
+
+.operatorKeys {
+  background: linear-gradient(to bottom, #ff9a0d, #e08a0a);
+}
+
+.operatorKeys:active {
+  background: linear-gradient(to bottom, #e08a0a, #c07a09)
+}
+
+
+.equals{
+  background: linear-gradient(to bottom , #4cc2ff, #2a9fd8)
+}
+
+.equals:active {
+  background: linear-gradient(to bottom, #2a9fd8, #1a7fb0);
+}
+
+
+
+/* decimal key styling */
+
+.decimal{
+  background: linear-gradient(to bottom, #5a5a5a, #3d3d3d);
+}
+
+
+/* function */
+
+.function {
+  background: linear-gradient(to bottom, #a0a0a0, #7a7a7a);
+}
+
+.function:active {
+  background: linear-gradient(to bottom, #8a8a8a, #6a6a6a);
+}
+
+
+
+
+
+footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+
+
+@media (max-width: 420px) {
+            .header, .calculator-container {
+                max-width: 95vw;
+            }
+            
+            .display {
+                font-size: 2rem;
+                height: 80px;
+            }
+            
+            .btn {
+                font-size: 1.3rem;
+                padding: 15px 0;
+            }
+            
+            .otherrows, .firstrow > div {
+                gap: 10px;
+            }
+            
+            #branding {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
